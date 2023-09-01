@@ -1,6 +1,8 @@
-
 package cl.ravenhill.alpaca
 
-class GameCharacter(val name: String, val hp: Int) {
-  var currentHp: Int = hp
+trait GameCharacter {
+  def name: String
+  def hp: Int
+  var currentHp: Int
+  def attack(target: GameCharacter): Unit
 }
